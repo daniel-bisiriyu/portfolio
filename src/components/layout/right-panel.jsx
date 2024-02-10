@@ -12,6 +12,7 @@ function RightPanel() {
             <li>Moniepoint</li>
             Personal Project
             <li>helpmedecide.com</li>
+            <li>Expensetracker</li>
         </ul>
     </div>
 } 
