@@ -1,28 +1,15 @@
 @import "tailwindcss";
 
-/* Each section takes full viewport width */
-.section {
-  flex: 0 0 100vw;
-  height: 100vh;
-}
-
-/* .container {
-  scrollbar-width: none;
-}
-.container::-webkit-scrollbar {
-  display: none;
-} */
-
-/* html,
 body {
-  overflow-x: hidden;
-} */
-
-.container {
-  height: 100vh;
+  background-color: #f5f4ed;
 }
 
-.section {
-  flex: 0 0 100vw; /* each section fills screen width */
-  height: 100vh;
+.experience,
+.about {
+  background-color: #101010;
+  color: #aaa;
+}
+
+.moi-img {
+  clip-path: inset(0% 0% 0% 0%);
 }

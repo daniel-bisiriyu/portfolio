@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Shadows_Into_Light_Two } from "next/font/google";
+import { Bebas_Neue } from "next/font/google";
 import "./globals.css";
 
-const ojuju = Shadows_Into_Light_Two({ weight: "400" });
+const inter = Bebas_Neue({ weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Daniel Bisiriyu",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ojuju.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
