@@ -102,7 +102,7 @@ export default function Experience() {
     <div ref={experienceRef}>
       <div className="experience text-left pt-8">
         <h1
-          className={`exp-text leading-[99%] text-[10rem] text-center relative font-extrabold`}
+          className={`hidden sm:block exp-text leading-[99%] text-[14rem] text-center relative font-extrabold`}
         >
           EXPERIENCE
         </h1>

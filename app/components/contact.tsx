@@ -6,9 +6,9 @@ export default function Contact() {
   const [state, handleSubmit] = useForm("mwprngpl");
 
   return (
-    <div className="text-center pb-34">
+    <div className="text-center pb-24">
       <div>
-        <h1 className="text-5xl font-extrabold">Wanna Get in Touch?</h1>
+        <h1 className="text-5xl font-extrabold">Want to get in Touch?</h1>
       </div>
       <div className="flex flex-col justify-center items-center">
         <form onSubmit={handleSubmit} className="w-[30%]">

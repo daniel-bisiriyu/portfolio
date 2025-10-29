@@ -13,13 +13,28 @@ export default function About() {
       mask: "lines",
     });
 
+    const splitMobile = SplitText.create(".heading-mobile", {
+      type: "chars, lines",
+      mask: "lines",
+    });
+
+    gsap.from(splitMobile.chars, {
+      yPercent: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: {
+        each: 0.05,
+        from: "center",
+      },
+    });
+
     gsap.from(split.chars, {
-      //   scrollTrigger: ".exp-text",
       scrollTrigger: {
         trigger: ".heading",
         start: "top 80%",
         end: "bottom 20%",
         scrub: true,
+        onEnter: () => console.log("Triggered!"),
       },
       yPercent: 100,
       opacity: 0,
@@ -35,42 +50,28 @@ export default function About() {
         trigger: ".moi",
         start: "top 80%",
         end: "bottom 80%",
-        scrub: 1, // smooth scrubbing
+        scrub: 1,
       },
-      clipPath: "inset(0% 0% 100% 0%)", // Hidden (clipped from bottom)
+      clipPath: "inset(0% 0% 100% 0%)",
       ease: "none",
     });
   });
 
   return (
-    <div>
+    <div id="about" className="mt-24 sm:mt-0">
       <h1
-        className={`heading leading-[99%] text-[12rem] text-center relative font-extrabold`}
+        className={`heading hidden sm:block leading-[99%] text-7xl sm:text-[14rem] text-center relative font-extrabold`}
       >
         ABOUT ME
       </h1>
-      <div className="about pb-12 px-24">
-        {/* <div className="pt-12 flex flex-col items-center">
-        <div className="ml-[-24rem]">
-          <Image
-            src="/moi.jpg"
-            width={250}
-            height={250}
-            alt="Daniel Bisiriyu"
-            className="grayscale"
-          />
-          <div className="text-2xl pl-12 pt-6 font-medium uppercase">
-            Hi, I'm Daniel!
-          </div>
-        </div>
-
-        <p className="text-center w-2/3 py-12 uppercase">
-          I am a senior frontend engineer <br /> with over five years experience
-          crafting products for the web!
-        </p>
-      </div> */}
-        <div className="moi py-32 flex justify-between">
-          <div className="w-1/2">
+      <h1
+        className={`heading-mobile block sm:hidden leading-[99%] text-7xl sm:text-[14rem] text-center relative font-extrabold`}
+      >
+        ABOUT ME
+      </h1>
+      <div className="about pb-12 px-4 sm:px-24">
+        <div className="moi py-32 flex flex-col-reverse sm:flex-row justify-between">
+          <div className="w-full sm:w-1/2">
             <p className="text-2xl pr-6 font-medium uppercase text-justify">
               Hi, I'm Daniel! Lorem ipsum dolor sit amet consectetur adipisicing
               elit. Aut sint corporis, itaque quis voluptatem nihil possimus
@@ -78,25 +79,16 @@ export default function About() {
               facilis neque cupiditate ad sequi temporibus?
             </p>
           </div>
-          <div className="w-1/2 flex justify-center">
+          <div className="hidden sm:block sm:w-1/2 relative flex justify-center">
             <Image
               src="/moi.jpg"
-              width={300}
-              height={300}
+              // width={300}
+              // height={300}
+              fill
               alt="Daniel Bisiriyu"
               className="moi-img grayscale"
             />
-            {/* <p className="pl-12">
-            I am a senior frontend engineer <br /> with over five years
-            experience crafting products for the web!
-          </p> */}
           </div>
-          {/* <div className="w-1/3">
-          <p className="uppercase">
-            I am a senior frontend engineer <br /> with over five years
-            experience crafting products for the web!
-          </p>
-        </div> */}
         </div>
         <div className="">
           <hr />
