@@ -73,10 +73,10 @@ export default function About() {
         <div className="moi py-32 flex flex-col-reverse sm:flex-row justify-between">
           <div className="w-full sm:w-1/2">
             <p className="text-2xl pr-6 font-medium uppercase text-justify">
-              Hi, I'm Daniel! Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Aut sint corporis, itaque quis voluptatem nihil possimus
-              maxime similique deleniti reprehenderit quos velit esse harum
-              facilis neque cupiditate ad sequi temporibus?
+              Hi, I&apos;m Daniel! Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Aut sint corporis, itaque quis voluptatem nihil
+              possimus maxime similique deleniti reprehenderit quos velit esse
+              harum facilis neque cupiditate ad sequi temporibus?
             </p>
           </div>
           <div className="hidden sm:block sm:w-1/2 relative flex justify-center">

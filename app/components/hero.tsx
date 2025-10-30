@@ -37,10 +37,9 @@ export default function Hero() {
     );
   });
 
-  interface MouseEnterEvent
-    extends React.MouseEvent<HTMLDivElement, MouseEvent> {}
-
-  const handleMouseMove = (e: MouseEnterEvent): void => {
+  const handleMouseMove = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ): void => {
     const strength = 90;
     const magneticDiv = e.target as HTMLDivElement;
     const bound = magneticDiv.getBoundingClientRect();
@@ -53,7 +52,9 @@ export default function Hero() {
     });
   };
 
-  const handleMouseLeave = (e: MouseEnterEvent) => {
+  const handleMouseLeave = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
     const magneticDiv = e.target as HTMLDivElement;
     gsap.to(magneticDiv, { x: 0, y: 0, ease: "elastic.easeOut", duration: 2 });
   };
@@ -62,7 +63,7 @@ export default function Hero() {
     <div className="hero pt-12 sm:h-screen">
       <div className="px-4 sm:px-12 text-center sm:text-left magnetic">
         <h1 className="text-2xl font-semibold">
-          Hello ~ I'm Daniel Bisiriyu, a
+          Hello ~ I&apos;m Daniel Bisiriyu, a
         </h1>
         <div className="pt-12 sm:pt-0">
           <p

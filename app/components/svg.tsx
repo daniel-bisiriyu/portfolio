@@ -7,7 +7,6 @@ export default function Svg() {
       viewBox="0 0 418 334"
       fill="none"
     >
-      <script src="chrome-extension://necpbmbhhdiplmfhmjicabdeighkndkn/frame_ant/frame_ant.js" />
       <mask
         id="mask0_316_2837"
         style={{ maskType: "alpha" }}
