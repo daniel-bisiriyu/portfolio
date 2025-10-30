@@ -60,7 +60,7 @@ export default function Hero() {
 
   return (
     <div className="hero pt-12 sm:h-screen">
-      <div className="px-4 sm:px-12 magnetic">
+      <div className="px-4 sm:px-12 text-center sm:text-left magnetic">
         <h1 className="text-2xl font-semibold">
           Hello ~ I'm Daniel Bisiriyu, a
         </h1>
