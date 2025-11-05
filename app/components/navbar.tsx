@@ -49,30 +49,33 @@ export default function Navbar() {
         <p className="mt-[-2.55rem]"> BISIRIYU</p>
       </div>
       <div className="self-center hidden sm:block">
-        <Link href="#about" className="pr-6 w-1/4">
-          [
-          <span className="link-text inline-block text-center min-w-[10ch]">
+        <Link href="#about" className="pr-6 w-1/4 cursor-pointer">
+          [{" "}
+          <span className="link-text inline-block text-center min-w-[10ch cursor-pointer]">
             About Me
-          </span>
+          </span>{" "}
           ]
         </Link>
-        <Link href="#experience" className="pr-6 w-1/4">
+        <Link
+          href="#experience"
+          className="pr-6 w-1/4 cursor-pointer cursor-pointer"
+        >
           [
-          <span className="link-text inline-block text-center min-w-[10ch]">
+          <span className="link-text inline-block text-center min-w-[10ch] cursor-pointer">
             Experience
           </span>
           ]
         </Link>
         <Link href="#skills" className="pr-6 link w-1/4">
           [
-          <span className="link-text inline-block text-center min-w-[10ch]">
+          <span className="link-text inline-block text-center min-w-[10ch] cursor-pointer">
             Skills
           </span>
           ]
         </Link>
         <Link href="#contact" className="pr-6 link w-1/4">
           [
-          <span className="link-text inline-block text-center min-w-[10ch]">
+          <span className="link-text inline-block text-center min-w-[10ch] cursor-pointer">
             Contact
           </span>
           ]

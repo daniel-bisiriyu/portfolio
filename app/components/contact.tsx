@@ -1,8 +1,11 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
+import Heading from "./heading";
+import { useRef } from "react";
 
 export default function Contact() {
+  const contactRef = useRef(null);
   const [state, handleSubmit] = useForm("mwprngpl");
 
   return (
@@ -10,6 +13,7 @@ export default function Contact() {
       <div>
         <h1 className="text-5xl font-extrabold">Want to get in Touch?</h1>
       </div>
+      {/* <Heading ref={contactRef} text={`Want to get in Touch?`} /> */}
       <div className="flex flex-col justify-center items-center">
         <form
           onSubmit={handleSubmit}

@@ -1,9 +1,15 @@
+"use client";
+
+import { useRef } from "react";
+import Heading from "./heading";
+import Paragraph from "./paragraph";
+
 export default function Skills() {
+  const skillsSectionRef = useRef(null);
+
   return (
     <div className="px-6 sm:px-24 pt-12 pb-34">
-      <h1 className="hidden sm:block text-[14rem] font-extrabold text-center">
-        Skills
-      </h1>
+      <Heading text="Skills" ref={skillsSectionRef} />
       <div className="w-full sm:w-3/4 mx-auto">
         <div className="pt-12">
           <small>01</small>
@@ -16,10 +22,15 @@ export default function Skills() {
           </div>
           <div className="w-full sm:w-2/3 sm:px-24">
             <div className="flex justify-between">
-              <p className="text-lg pt-6 sm:pt-0 sm:text-2xl">
+              {/* <p className="text-lg pt-6 sm:pt-0 sm:text-2xl">
                 Javascript, TypeScript, Node.Js, React, Next.js, Vue, Nuxt,
                 Angular, GSAP
-              </p>
+              </p> */}
+              <Paragraph
+                ref={skillsSectionRef}
+                text={`Javascript, TypeScript, Node.Js, React, Next.js, Vue, Nuxt,
+                Angular, GSAP`}
+              />
             </div>
           </div>
         </div>
@@ -32,9 +43,10 @@ export default function Skills() {
           </div>
           <div className="w-full sm:w-2/3 sm:px-24">
             <div className="flex justify-between">
-              <p className="text-lg pt-6 sm:pt-0 sm:text-2xl">
-                Jest, Cypress, Cucumber.js, Gherkin
-              </p>
+              <Paragraph
+                ref={skillsSectionRef}
+                text={`Jest, Cypress, Cucumber.js, Gherkin`}
+              />
             </div>
           </div>
         </div>
@@ -49,9 +61,10 @@ export default function Skills() {
           </div>
           <div className="w-full sm:w-2/3 sm:px-24">
             <div className="flex justify-between">
-              <p className="text-lg pt-6 sm:pt-0 sm:text-2xl">
-                Docker, Kubernetes, Storybook
-              </p>
+              <Paragraph
+                ref={skillsSectionRef}
+                text={` Docker, Kubernetes, Storybook`}
+              />
             </div>
           </div>
         </div>
