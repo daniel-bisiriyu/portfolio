@@ -1,7 +1,6 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
-import gsap from "gsap";
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("mwprngpl");
@@ -38,7 +37,6 @@ export default function Contact() {
       <div>
         <h1 className="text-5xl font-extrabold">Want to get in Touch?</h1>
       </div>
-      {/* <Heading ref={contactRef} text={`Want to get in Touch?`} /> */}
       <div className="flex flex-col justify-center items-center">
         <form
           onSubmit={handleSubmit}
@@ -71,11 +69,7 @@ export default function Contact() {
               errors={state.errors}
             />
           </div>
-          <div
-            className="py-6"
-            // onMouseMove={handleMouseMove}
-            // onMouseOut={handleMouseLeave}
-          >
+          <div className="py-6">
             <button
               type="submit"
               disabled={state.submitting}

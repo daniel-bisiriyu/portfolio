@@ -35,10 +35,10 @@ export default function About() {
               TL:DR - I am a great engineer and you should hire me!
             </Paragraph>
             <Paragraph ref={aboutRef}>
-              Hi, I'm Daniel! Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Aut sint corporis, itaque quis voluptatem nihil possimus
-              maxime similique deleniti reprehenderit quos velit esse harum
-              facilis neque cupiditate ad sequi temporibus?x
+              Hi, I&apos;m Daniel! Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Aut sint corporis, itaque quis voluptatem nihil
+              possimus maxime similique deleniti reprehenderit quos velit esse
+              harum facilis neque cupiditate ad sequi temporibus?x
             </Paragraph>
           </div>
           <div className="hidden md:flex justify-center md:w-1/2">
