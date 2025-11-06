@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Bebas_Neue } from "next/font/google";
 import "./globals.css";
+import Lenis from "./components/lenis";
 
-const inter = Bebas_Neue({ weight: ["400"] });
+const bebasNeue = Bebas_Neue({ weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Daniel Bisiriyu",
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={bebasNeue.className}>
+        <Lenis />
+        {children}
+      </body>
     </html>
   );
 }

@@ -2,6 +2,7 @@
 
 body {
   background-color: #f5f4ed;
+  scroll-behavior: smooth;
 }
 
 .experience,
@@ -17,3 +18,44 @@ body {
 .text {
   overflow: hidden;
 }
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+#custom-cursor {
+  /* Visuals */
+  width: 10px;
+  height: 10px;
+  /* background-color: rgb(57, 255, 20); */
+  background-color: #8b5cf6;
+  border-radius: 50%;
+  opacity: 0.8;
+
+  /* Positioning and Behavior */
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+
+  /* Centering the dot on the cursor tip */
+  transform: translate(-50%, -50%) scale(0);
+
+  /* Transition for smooth movement (optional, but highly recommended) */
+  transition: transform 0.1s ease-out;
+}
+/* #custom-cursor.hover {
+  transform: scale(1.5);
+  background-color: #facc15;
+} */
