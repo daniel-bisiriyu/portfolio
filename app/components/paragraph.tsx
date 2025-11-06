@@ -8,11 +8,11 @@ import { Inter } from "next/font/google";
 const montSerrat = Inter({ weight: ["400"] });
 
 export default function Paragraph({
-  text,
   ref,
+  children,
 }: {
-  text: string;
   ref: ReactRef;
+  children: React.ReactNode;
 }) {
   useGSAP(
     () => {
@@ -26,9 +26,8 @@ export default function Paragraph({
         scrollTrigger: {
           trigger: ".p-wrapper p",
           start: "top 80%",
-          end: "bottom 30%",
-          scrub: true,
-          onEnter: () => console.log("p entered"),
+          end: "bottom 50%",
+          scrub: 0.5,
         },
         yPercent: 100,
         opacity: 0,
@@ -44,7 +43,9 @@ export default function Paragraph({
 
   return (
     <div ref={ref} className="p-wrapper">
-      <p className={`${montSerrat.className} text-sm  sm:text-lg`}>{text}</p>
+      <p className={`${montSerrat.className} text-sm  xl:text-lg`}>
+        {children}
+      </p>
     </div>
   );
 }

@@ -7,9 +7,11 @@ import { ScrollTrigger, SplitText } from "gsap/all";
 export default function Heading({
   text,
   ref,
+  isAbout,
 }: {
   text: string;
   ref: ReactRef;
+  isAbout?: boolean;
 }) {
   useGSAP(
     () => {
@@ -19,7 +21,7 @@ export default function Heading({
         mask: "lines",
       });
 
-      const splitMobile = SplitText.create(".heading-mobile", {
+      const splitMobile = SplitText.create(".no-animation-on-scroll", {
         type: "chars, lines",
         mask: "lines",
       });
@@ -38,9 +40,8 @@ export default function Heading({
         scrollTrigger: {
           trigger: ".heading",
           start: "top 80%",
-          end: "bottom 20%",
-          scrub: true,
-          onEnter: () => console.log("Triggered!"),
+          end: "bottom 50%",
+          scrub: 0.5,
         },
         yPercent: 100,
         opacity: 0,
@@ -54,25 +55,32 @@ export default function Heading({
     { scope: ref }
   );
 
+  const shouldNotAnimateOnScroll = () => {
+    return isAbout && window.innerWidth < 788;
+  };
+
   return (
     <div ref={ref}>
       <h1
-        className={`heading hidden sm:block leading-[99%] sm:text-[11rem] text-center relative font-extrabold`}
+        className={`heading hidden md:block leading-[99%] md:text-8xl xl:text-[11rem] text-center relative font-extrabold`}
       >
         {text}
       </h1>
+
       <h1
-        className={`heading block sm:hidden leading-[99%] text-5xl text-center relative font-extrabold`}
+        className={`${
+          shouldNotAnimateOnScroll() && "no-animation-on-scroll"
+        } block md:hidden leading-[99%] text-5xl text-center relative font-extrabold`}
       >
         {text}
       </h1>
-      <div className="w-[30%] mx-auto mt-0 sm:mt-[-2rem]">
+      <div className="w-[30%] mx-auto mt-0 md:mt-[-1.5rem]">
         <svg viewBox="0 0 200 20" preserveAspectRatio="none">
           <path
             d="M5 12 Q 50 8, 100 11 T 195 10"
             fill="none"
             stroke="#8b5cf6"
-            strokeWidth="4"
+            strokeWidth="5"
             strokeLinecap="round"
           />
         </svg>

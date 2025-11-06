@@ -26,20 +26,22 @@ export default function About() {
   });
 
   return (
-    <div id="about" className="mt-24 sm:mt-48">
+    <div id="about" className="mt-24 xl:mt-48">
       <Heading ref={aboutRef} text="About" />
-      <div className="about pb-12 px-4 sm:px-64">
-        <div className="moi py-12 sm:py-32 flex flex-col-reverse sm:flex-row justify-between">
-          <div className="w-full sm:w-1/2 text-left">
-            <Paragraph
-              ref={aboutRef}
-              text={`Hi, I'm Daniel! Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Aut sint corporis, itaque quis voluptatem nihil
-              possimus maxime similique deleniti reprehenderit quos velit esse
-              harum facilis neque cupiditate ad sequi temporibus?`}
-            />
+      <div className="about pb-12 px-4 md:px-24 xl:px-64">
+        <div className="moi py-12 md:py-32 flex flex-col-reverse md:flex-row justify-between">
+          <div className="w-full md:w-1/2 text-left">
+            <Paragraph ref={aboutRef}>
+              TL:DR - I am a great engineer and you should hire me!
+            </Paragraph>
+            <Paragraph ref={aboutRef}>
+              Hi, I'm Daniel! Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Aut sint corporis, itaque quis voluptatem nihil possimus
+              maxime similique deleniti reprehenderit quos velit esse harum
+              facilis neque cupiditate ad sequi temporibus?x
+            </Paragraph>
           </div>
-          <div className="hidden sm:flex justify-center sm:w-1/2">
+          <div className="hidden md:flex justify-center md:w-1/2">
             <Image
               src="/moi.jpg"
               width={300}
@@ -52,14 +54,15 @@ export default function About() {
         <div className="">
           <hr />
         </div>
-        <div className="py-6 sm:py-24">
-          <Paragraph
-            ref={aboutRef}
-            text={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ad
-            labore dolor ab dolores alias mollitia aliquid minus possimus,
-            pariatur dolorum magni esse veritatis hic sint id ex numquam
-            doloremque!`}
-          />
+        <div className="py-6 md:py-12 xl:py-24">
+          <Paragraph ref={aboutRef}>
+            My CORE values: Conscientious, Not sure what should be O yet
+            Reliable, Excellence! <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+            deserunt. Ea molestias fugiat doloribus! Voluptatem commodi omnis
+            mollitia iure laboriosam laudantium. Nobis facilis adipisci dolorum
+            maiores officia rem, repellat blanditiis.
+          </Paragraph>
         </div>
       </div>
     </div>

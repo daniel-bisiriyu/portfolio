@@ -1,12 +1,37 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
-import Heading from "./heading";
-import { useRef } from "react";
+import gsap from "gsap";
 
 export default function Contact() {
-  const contactRef = useRef(null);
   const [state, handleSubmit] = useForm("mwprngpl");
+
+  // const handleMouseMove = (
+  //   e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  // ): void => {
+  //   const strength = 90;
+  //   const magneticDiv = e.target as HTMLDivElement;
+  //   const bound = magneticDiv.getBoundingClientRect();
+
+  //   gsap.to(magneticDiv, {
+  //     x: ((e.clientX - bound.left) / magneticDiv.offsetWidth - 0.5) * strength,
+  //     y: ((e.clientY - bound.top) / magneticDiv.offsetHeight - 0.5) * strength,
+  //     duration: 2,
+  //     ease: "elastic.easeOut",
+  //   });
+  // };
+
+  // const handleMouseLeave = (
+  //   e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  // ) => {
+  //   const magneticDiv = e.target as HTMLDivElement;
+  //   gsap.to(magneticDiv, {
+  //     x: 0,
+  //     y: 0,
+  //     ease: "elastic.easeOut",
+  //     duration: 0.5,
+  //   });
+  // };
 
   return (
     <div className="text-center pb-24">
@@ -17,7 +42,7 @@ export default function Contact() {
       <div className="flex flex-col justify-center items-center">
         <form
           onSubmit={handleSubmit}
-          className="w-full px-6 sm:px-0 sm:w-[30%]"
+          className="w-full px-6 xl:px-0 md:w-[50%] xl:w-[30%]"
         >
           <div className="py-12">
             <input
@@ -46,13 +71,19 @@ export default function Contact() {
               errors={state.errors}
             />
           </div>
-          <button
-            type="submit"
-            disabled={state.submitting}
-            className="text-[#aaa] border rounded-md py-3 w-[12rem] w-full cursor-pointer mt-6"
+          <div
+            className="py-6"
+            // onMouseMove={handleMouseMove}
+            // onMouseOut={handleMouseLeave}
           >
-            Submit
-          </button>
+            <button
+              type="submit"
+              disabled={state.submitting}
+              className="text-[#aaa] border rounded-md w-[12rem] w-full cursor-pointer py-3"
+            >
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     </div>
