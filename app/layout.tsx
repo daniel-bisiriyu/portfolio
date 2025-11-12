@@ -7,7 +7,7 @@ const bebasNeue = Bebas_Neue({ weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Daniel Bisiriyu",
-  description: "Billionaire, philanthropist and all round great guy!",
+  description: "Genius, Billionaire, philanthropist and all round great guy!",
 };
 
 export default function RootLayout({

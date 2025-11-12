@@ -2,45 +2,11 @@
 
 import Link from "next/link";
 import { Sofia_Sans_Condensed } from "next/font/google";
-
-import { ScrambleTextPlugin } from "gsap/all";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import SlideText from "./slide-text";
 
 const sofia = Sofia_Sans_Condensed();
 
 export default function Navbar() {
-  useGSAP(() => {
-    gsap.registerPlugin(ScrambleTextPlugin);
-
-    const links = document.getElementsByClassName("link-text");
-
-    Array.from(links).forEach((link) => {
-      const originalText = link.textContent as string;
-
-      link.addEventListener("mouseenter", () => {
-        gsap.to(link, {
-          duration: 0.6,
-          scrambleText: {
-            text: originalText,
-            chars: "XOXOXO",
-            revealDelay: 0.2,
-          },
-        });
-      });
-
-      link.addEventListener("mouseleave", () => {
-        gsap.to(link, {
-          duration: 0.4,
-          scrambleText: {
-            text: originalText,
-            chars: "01",
-          },
-        });
-      });
-    });
-  });
-
   return (
     <div className="flex justify-between align-center p-4 md:py-8 md:px-10">
       <div className={`${sofia.className} font-black text-xl`}>
@@ -50,35 +16,36 @@ export default function Navbar() {
       </div>
       <div className="self-center hidden md:block">
         <Link href="#about" className="pr-6 w-1/4 cursor-pointer">
-          [{" "}
-          <span className="link-text inline-block text-center min-w-[10ch cursor-pointer]">
-            About Me
-          </span>{" "}
-          ]
+          {/* <span>[</span> */}
+          <span className="link-text inline-block text-center cursor-pointer my-0 py-0">
+            <SlideText text="About Me" />
+          </span>
+          {/* <span>]</span> */}
         </Link>
         <Link
           href="#experience"
           className="pr-6 w-1/4 cursor-pointer cursor-pointer"
         >
-          [
-          <span className="link-text inline-block text-center min-w-[10ch] cursor-pointer">
-            Experience
+          <span className="link-text inline-block text-center cursor-pointer">
+            {/* Experience */}
+            <SlideText text="Experience" />
           </span>
-          ]
         </Link>
         <Link href="#skills" className="pr-6 link w-1/4">
-          [
-          <span className="link-text inline-block text-center min-w-[10ch] cursor-pointer">
-            Skills
+          {/* [ */}
+          <span className="link-text inline-block text-center cursor-pointer">
+            {/* Skills */}
+            <SlideText text="Skills" />
           </span>
-          ]
+          {/* ] */}
         </Link>
         <Link href="#contact" className="pr-6 link w-1/4">
-          [
-          <span className="link-text inline-block text-center min-w-[10ch] cursor-pointer">
-            Contact
+          {/* [ */}
+          <span className="link-text inline-block text-center cursor-pointer">
+            {/* Contact */}
+            <SlideText text="Contact" />
           </span>
-          ]
+          {/* ] */}
         </Link>
       </div>
     </div>
