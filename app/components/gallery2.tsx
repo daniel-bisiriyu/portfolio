@@ -22,6 +22,11 @@ export const IMAGES = [
   "/gallery/img13.png",
   "/gallery/img14.png",
   "/gallery/img15.png",
+  "/gallery/img16.png",
+  "/gallery/img17.png",
+  "/gallery/img18.png",
+  "/gallery/img19.png",
+  "/gallery/img20.png",
 ];
 
 export default function ImageDepthScroll() {

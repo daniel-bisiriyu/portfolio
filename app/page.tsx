@@ -34,7 +34,7 @@ export default function Home() {
       {/* <div className="loading-screen fixed top-0 left-0 w-full h-screen bg-black z-50 flex items-center justify-center">
         <h1 className="text-white">Loading...</h1>
       </div> */}
-      <div className={`page-content`}>
+      <div className={`page-content overflow-hidden`}>
         <CursorTrail />
         <Navbar />
         <Hero />

@@ -4,9 +4,7 @@ import { useRef } from "react";
 import Heading from "./heading";
 import Paragraph from "./paragraph";
 import SlideText from "./slide-text";
-import ThreeDGallery from "./3d-gallery";
-// import Gallery from "./gallery";
-// import FloatingImages from "./gallery2";
+import CopyGallery from "./copy-gallery";
 
 export default function Experience() {
   const experienceRef = useRef(null);
@@ -15,8 +13,7 @@ export default function Experience() {
     <div ref={experienceRef}>
       <div className="experience text-left pt-8">
         <Heading ref={experienceRef} text="Experience" />
-        {/* <FloatingImages /> */}
-        <ThreeDGallery />
+        <CopyGallery />
         <div className="px-6 md:px-24 xl:px-64 mt-12 md:mt-12">
           <div className="flex flex-col md:flex-row justify-between pb-12 md:pb-24">
             <div className="w-full md:w-1/2">

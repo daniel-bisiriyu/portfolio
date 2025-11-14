@@ -9,10 +9,11 @@ export default function ThreeDGallery() {
 
     items.forEach((item) => {
       // Random scattered positions (X, Y)
-      const startX = gsap.utils.random(-40, 40); // %
+      const startX = gsap.utils.random(-15, 15); // %
       const startY = gsap.utils.random(-30, 30); // %
       const rotX = gsap.utils.random(-40, -15); // tilt backward
-      const deepZ = gsap.utils.random(-6000, -3000); // far away
+      const deepZ = gsap.utils.random(-2000, -800); // far away
+      const yShift = gsap.utils.random(-400, -800); // upward movement range
 
       gsap.fromTo(
         item,
@@ -21,34 +22,49 @@ export default function ThreeDGallery() {
           yPercent: startY,
           rotationX: rotX,
           z: deepZ,
+          y: 0,
+          scale: 1,
         },
         {
-          z: 1500, // fly past camera
+          y: yShift,
+          z: 2000, // fly past camera
           rotationX: 0,
+          scale: 1.3,
+
           ease: "none",
           scrollTrigger: {
             trigger: ".three-d-gallery",
             scrub: true,
             start: "top bottom",
             end: "bottom top",
-            onEnter: () => console.log("entered-gallery"),
           },
         }
       );
     });
+
+    gsap.to(".gallery-grid", {
+      z: 6000,
+      scrollTrigger: {
+        trigger: ".three-d-gallery",
+        scrub: true,
+        start: "top bottom",
+        end: "bottom top",
+        onEnter: () => console.log("entered-gallery"),
+      },
+    });
     // });
   });
   return (
-    <div className="relative three-d-gallery">
-      <div className="grid perspective-[4000px] max-w-[50vw] mx-auto relative]">
-        <div className="gallery-grid grid gap-x-[1.25em] gap-y-[1.25em] perspective-[4000px">
+    <div className="relative three-d-gallery my-[10rem]">
+      <div className="grid perspective-[4000px] max-w-[40vw] mx-auto relative]">
+        <div className="gallery-grid grid gap-x-[1.25em] gap-y-[1.25em] perspective-[4000px] preserve-3d">
           {IMAGES.map((src, i) => (
             <div key={i} className="gallery-grid-item float-item">
               <Image
                 src={src}
                 alt="Image"
-                width={200}
-                height={200}
+                width={150}
+                height={150}
                 className="rounded-md shadow-lg"
               />
             </div>
