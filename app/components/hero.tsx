@@ -2,39 +2,83 @@
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrambleTextPlugin, DrawSVGPlugin } from "gsap/all";
+import { ScrambleTextPlugin, DrawSVGPlugin, SplitText } from "gsap/all";
 
 export default function Hero() {
   useGSAP(() => {
-    gsap.registerPlugin(ScrambleTextPlugin, DrawSVGPlugin);
+    gsap.registerPlugin(ScrambleTextPlugin, DrawSVGPlugin, SplitText);
+    const splitP1 = SplitText.create(".text-1", {
+      type: "chars, lines",
+      mask: "lines",
+    });
+    const splitP2 = SplitText.create(".text-2", {
+      type: "chars, lines",
+      mask: "lines",
+    });
+
+    gsap.set(".text-1", {
+      x: 100,
+    });
+
+    gsap.set(".text-2", {
+      x: -100,
+    });
 
     const tl = gsap.timeline({
-      yoyo: true,
-      duration: 1,
-      delay: 2,
+      duration: 0.5,
+      ease: "power3.out",
     });
 
-    gsap.from(".text-1", {
-      y: 50,
-      opacity: 0,
-      duration: 1,
-    });
-    gsap.from(".text-2", {
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      delay: 0.5,
-    });
-
-    tl.to("#scramble", {
-      scrambleText: "FRONTEND",
-    }).to(
-      "#scramble",
-      {
-        scrambleText: "SOFTWARE",
+    tl.from(splitP1.chars, {
+      yPercent: -100,
+      stagger: {
+        each: 0.1,
+        from: "random",
       },
-      "+=3"
-    );
+    })
+      .from(
+        splitP2.chars,
+        {
+          yPercent: -100,
+          stagger: {
+            each: 0.1,
+            from: "random",
+          },
+        },
+        "<"
+      )
+      .to(
+        ".text-1",
+        {
+          x: 0,
+          duration: 0.8,
+          ease: "power2.inOut",
+        },
+        "-=0.9"
+      )
+      .to(
+        ".text-2",
+        {
+          x: 0,
+          duration: 0.8,
+          ease: "power2.inOut",
+        },
+        "<"
+      )
+      .to(
+        "#scramble",
+        {
+          scrambleText: "FRONTEND",
+        },
+        "+=3"
+      )
+      .to(
+        "#scramble",
+        {
+          scrambleText: "SOFTWARE",
+        },
+        "+=3"
+      );
   });
 
   return (
@@ -47,7 +91,7 @@ export default function Hero() {
           <div className="text-center md:text-left">
             <p
               id="scramble"
-              className="text-1 text-6xl md:text-9xl xl:text-[12rem] font-extrabold tracking-[10px] magnet"
+              className="text-1 text-6xl md:text-9xl xl:text-[12rem] font-extrabold tracking-[10px] magnet ml-"
             >
               SOFTWARE
             </p>

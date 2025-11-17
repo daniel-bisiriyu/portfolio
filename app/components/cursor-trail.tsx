@@ -22,7 +22,7 @@ export default function CursorTrail() {
     interactiveElements.forEach((el) => {
       el.addEventListener("mouseover", () => {
         cursor.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(4)`;
-        cursor.innerText = "Click";
+        cursor.innerText = "View";
         cursor.style.color = "#ffffff";
         cursor.style.width = "40px";
         cursor.style.height = "40px";
