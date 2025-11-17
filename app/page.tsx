@@ -6,6 +6,7 @@ import CursorTrail from "./components/cursor-trail";
 import Experience from "./components/experience";
 import Footer from "./components/footer";
 import Hero from "./components/hero";
+import LoaderText from "./components/loading-text";
 import Navbar from "./components/navbar";
 import Skills from "./components/skills";
 // import { useEffect } from "react";
@@ -31,10 +32,11 @@ export default function Home() {
 
   return (
     <>
-      {/* <div className="loading-screen fixed top-0 left-0 w-full h-screen bg-black z-50 flex items-center justify-center">
-        <h1 className="text-white">Loading...</h1>
-      </div> */}
-      <div className={`page-content overflow-hidden`}>
+      <div className="loading-screen fixed top-0 left-0 w-screen h-screen bg-black z-50 flex items-center justify-center">
+        {/* <h1 className="text-white">Loading...</h1> */}
+        <LoaderText />
+      </div>
+      {/* <div className={`page-content overflow-hidden`}>
         <CursorTrail />
         <Navbar />
         <Hero />
@@ -43,7 +45,7 @@ export default function Home() {
         <Skills />
         <Contact />
         <Footer />
-      </div>
+      </div> */}
     </>
   );
 }

@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Heading from "./heading";
 import Paragraph from "./paragraph";
 import SlideText from "./slide-text";
-import CopyGallery from "./copy-gallery";
+import ExperienceGallery from "./experience-gallery";
 
 export default function Experience() {
   const experienceRef = useRef(null);
@@ -13,12 +13,11 @@ export default function Experience() {
     <div ref={experienceRef}>
       <div className="experience text-left pt-8">
         <Heading ref={experienceRef} text="Experience" />
-        <CopyGallery />
+        <ExperienceGallery />
         <div className="px-6 md:px-24 xl:px-64 mt-12 md:mt-12">
           <div className="flex flex-col md:flex-row justify-between pb-12 md:pb-24">
             <div className="w-full md:w-1/2">
               <div className="text-3xl md:text-5xl font-semibold">
-                {/* Moniepoint */}
                 <SlideText text="Moniepoint" />
               </div>
               <p>[2021 - 2025]</p>

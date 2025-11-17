@@ -24,7 +24,7 @@ const IMAGES = [
   "/gallery/img20.png",
 ];
 
-export default function CopyGallery() {
+export default function ExperienceGallery() {
   useGSAP(() => {
     const gridWrap = document.querySelector(".gallery-grid") as HTMLDivElement;
 

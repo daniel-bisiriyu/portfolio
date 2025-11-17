@@ -33,18 +33,18 @@ export default function SlideText({ text }: { text: string }) {
 
     tl.to(split.current.chars, {
       yPercent: -100,
-      stagger: {
-        each: 0.03,
-        from: "start",
-      },
+      // stagger: {
+      //   each: 0.03,
+      //   from: "start",
+      // },
     }).to(
       splitLower.current.chars,
       {
         yPercent: -100,
-        stagger: {
-          each: 0.03,
-          from: "start",
-        },
+        // stagger: {
+        //   each: 0.03,
+        //   from: "start",
+        // },
       },
       0
     );
@@ -57,18 +57,18 @@ export default function SlideText({ text }: { text: string }) {
 
     tl.to(split.current.chars, {
       yPercent: 0,
-      stagger: {
-        each: 0.03,
-        from: "end",
-      },
+      // stagger: {
+      //   each: 0.03,
+      //   from: "end",
+      // },
     }).to(
       splitLower.current.chars,
       {
         yPercent: 0,
-        stagger: {
-          each: 0.03,
-          from: "end",
-        },
+        // stagger: {
+        //   each: 0.03,
+        //   from: "end",
+        // },
       },
       0
     );
