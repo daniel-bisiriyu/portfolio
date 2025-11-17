@@ -6,13 +6,11 @@ import { useRef, useEffect } from "react";
 
 export default function SlideText({ text }: { text: string }) {
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const split = useRef<any>(null);
-  const splitLower = useRef<any>(null);
+  const split = useRef<SplitText | null>(null);
+  const splitLower = useRef<SplitText | null>(null);
 
   useEffect(() => {
     gsap.registerPlugin(SplitText);
-
-    // Split the two text layers
     split.current = new SplitText(
       wrapperRef.current!.querySelector(".upper-text"),
       {
@@ -31,47 +29,40 @@ export default function SlideText({ text }: { text: string }) {
       defaults: { duration: 0.5, ease: "power3.out" },
     });
 
-    tl.to(split.current.chars, {
-      yPercent: -100,
-      // stagger: {
-      //   each: 0.03,
-      //   from: "start",
-      // },
-    }).to(
-      splitLower.current.chars,
-      {
+    if (split.current && splitLower.current)
+      tl.to(split.current.chars, {
         yPercent: -100,
-        // stagger: {
-        //   each: 0.03,
-        //   from: "start",
-        // },
-      },
-      0
-    );
+        stagger: {
+          each: 0.03,
+          from: "start",
+        },
+      }).to(
+        splitLower.current.chars,
+        {
+          yPercent: -100,
+          stagger: {
+            each: 0.03,
+            from: "start",
+          },
+        },
+        0
+      );
   };
 
   const handleMouseLeave = () => {
     const tl = gsap.timeline({
       defaults: { duration: 0.5, ease: "power3.out" },
     });
-
-    tl.to(split.current.chars, {
-      yPercent: 0,
-      // stagger: {
-      //   each: 0.03,
-      //   from: "end",
-      // },
-    }).to(
-      splitLower.current.chars,
-      {
+    if (split.current && splitLower.current)
+      tl.to(split.current.chars, {
         yPercent: 0,
-        // stagger: {
-        //   each: 0.03,
-        //   from: "end",
-        // },
-      },
-      0
-    );
+      }).to(
+        splitLower.current.chars,
+        {
+          yPercent: 0,
+        },
+        0
+      );
   };
 
   return (
