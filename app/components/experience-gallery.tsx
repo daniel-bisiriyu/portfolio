@@ -33,7 +33,7 @@ export default function ExperienceGallery() {
       item.querySelector(".gallery-grid-inner")
     );
 
-    const gridTimeline2 = gsap.timeline({
+    const gridTimeline = gsap.timeline({
       defaults: { ease: "none" },
       scrollTrigger: {
         trigger: gridWrap,
@@ -43,7 +43,7 @@ export default function ExperienceGallery() {
         id: "gridTimelineTrigger",
       },
     });
-    gridTimeline2
+    gridTimeline
       .set(gridItems, {
         transformOrigin: "50% 0%",
         z: () => gsap.utils.random(-6e3, -100),
@@ -107,7 +107,7 @@ export default function ExperienceGallery() {
                 className="gallery-grid-item float-item overflow-hidden h-[5em]"
               >
                 <div
-                  className="overflow-hidden gallery-grid-inner"
+                  className="overflow-hidden gallery-grid-inner relative"
                   style={{
                     backgroundImage: `url(${src})`,
                     backgroundPosition: "50%",

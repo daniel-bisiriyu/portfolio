@@ -13,7 +13,7 @@ export default function CursorTrail() {
 
       cursor.style.transform = "scale(1)";
       cursor.style.transform = `translate(${mouseX}px, ${
-        mouseY - 20
+        mouseY - 40
       }px) scale(1)`;
     });
 

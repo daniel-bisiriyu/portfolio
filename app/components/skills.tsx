@@ -8,7 +8,7 @@ export default function Skills() {
   const skillsSectionRef = useRef(null);
 
   return (
-    <div className="px-6 md:px-32 xl:px-52 pt-12 pb-34">
+    <div id="skills" className="px-6 md:px-32 xl:px-52 pt-12 pb-34">
       <Heading text="Skills" ref={skillsSectionRef} />
       <div className="w-full xl:w-3/4 md:mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mt-24">

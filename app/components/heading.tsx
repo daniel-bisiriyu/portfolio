@@ -2,7 +2,7 @@
 
 import gsap from "gsap";
 import { ReactRef, useGSAP } from "@gsap/react";
-import { ScrollTrigger, SplitText } from "gsap/all";
+import { ScrollTrigger, SplitText, DrawSVGPlugin } from "gsap/all";
 
 export default function Heading({
   text,
@@ -15,26 +15,27 @@ export default function Heading({
 }) {
   useGSAP(
     () => {
-      gsap.registerPlugin(ScrollTrigger, SplitText);
+      gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin);
       const split = SplitText.create(".heading", {
         type: "chars, lines",
         mask: "lines",
       });
+      // const tl = gsap.timeline();
 
-      const splitMobile = SplitText.create(".no-animation-on-scroll", {
-        type: "chars, lines",
-        mask: "lines",
-      });
+      // const splitMobile = SplitText.create(".no-animation-on-scroll", {
+      //   type: "chars, lines",
+      //   mask: "lines",
+      // });
 
-      gsap.from(splitMobile.chars, {
-        yPercent: 100,
-        opacity: 0,
-        duration: 1,
-        stagger: {
-          each: 0.05,
-          from: "center",
-        },
-      });
+      // gsap.from(splitMobile.chars, {
+      //   yPercent: 100,
+      //   opacity: 0,
+      //   duration: 1,
+      //   stagger: {
+      //     each: 0.05,
+      //     from: "center",
+      //   },
+      // });
 
       gsap.from(split.chars, {
         scrollTrigger: {
@@ -51,6 +52,24 @@ export default function Heading({
           from: "center",
         },
       });
+
+      gsap.fromTo(
+        ".heading-underline-path",
+        {
+          drawSVG: "0%",
+        },
+        {
+          drawSVG: "100%",
+          scrollTrigger: {
+            trigger: ".heading-underline-path",
+            start: "top 80%",
+            end: "bottom 30%",
+            scrub: 0.5,
+          },
+          duration: 1,
+          ease: "power4.inOut",
+        }
+      );
     },
     { scope: ref }
   );
@@ -62,7 +81,7 @@ export default function Heading({
   return (
     <div ref={ref}>
       <h1
-        className={`heading hidden md:block leading-[99%] md:text-8xl xl:text-[11rem] text-center relative font-extrabold`}
+        className={`heading hidden md:block leading-[99%] md:text-8xl xl:text-[10rem] text-center relative font-extrabold`}
       >
         {text}
       </h1>
@@ -82,6 +101,7 @@ export default function Heading({
             stroke="#8b5cf6"
             strokeWidth="5"
             strokeLinecap="round"
+            className="heading-underline-path"
           />
         </svg>
       </div>

@@ -14,24 +14,19 @@ export default function Navbar() {
         <br />
         <p className="mt-[-2.55rem]"> BISIRIYU</p>
       </div>
-      <div className="self-center hidden md:block">
-        <Link href="#about" className="pr-6 w-1/4 cursor-pointer">
-          {/* <span>[</span> */}
-          <span className="link-text inline-block text-center cursor-pointer my-0 py-0">
+      <div className="self-center hidden md:flex">
+        <Link href="#about" className="pr-6 cursor-pointer">
+          <span className="link-text inline-block text-center cursor-pointer my-0 py-0 flex items-center">
             <SlideText text="About Me" />
           </span>
-          {/* <span>]</span> */}
         </Link>
-        <Link
-          href="#experience"
-          className="pr-6 w-1/4 cursor-pointer cursor-pointer"
-        >
+        <Link href="#experience" className="pr-6 cursor-pointer cursor-pointer">
           <span className="link-text inline-block text-center cursor-pointer">
             {/* Experience */}
             <SlideText text="Experience" />
           </span>
         </Link>
-        <Link href="#skills" className="pr-6 link w-1/4">
+        <Link href="#skills" className="pr-6 link">
           {/* [ */}
           <span className="link-text inline-block text-center cursor-pointer">
             {/* Skills */}
@@ -39,7 +34,7 @@ export default function Navbar() {
           </span>
           {/* ] */}
         </Link>
-        <Link href="#contact" className="pr-6 link w-1/4">
+        <Link href="#contact" className="pr-6 link">
           {/* [ */}
           <span className="link-text inline-block text-center cursor-pointer">
             {/* Contact */}
@@ -47,6 +42,15 @@ export default function Navbar() {
           </span>
           {/* ] */}
         </Link>
+        <a
+          className="link"
+          href="https://drive.google.com/file/d/1HFMC0ODQJ6LlqdgWAxE6j1_e6LiqNM7J/view?usp=sharing"
+          target="_blank"
+        >
+          <span className="link-text inline-block text-center cursor-pointer">
+            <SlideText text="Resume" />
+          </span>
+        </a>
       </div>
     </div>
   );

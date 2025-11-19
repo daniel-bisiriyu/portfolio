@@ -8,7 +8,12 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex justify-between">
-          <a href="#">[ RESUME ]</a>
+          <a
+            href="https://drive.google.com/file/d/1HFMC0ODQJ6LlqdgWAxE6j1_e6LiqNM7J/view?usp=sharing"
+            target="_blank"
+          >
+            [ RESUME ]
+          </a>
           <a href="#" className="pl-12">
             [ LINKEDIN ]
           </a>
