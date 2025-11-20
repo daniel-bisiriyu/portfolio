@@ -24,24 +24,31 @@ export default function Experience() {
             </div>
             <div className="text-left py-2 w-full md:w-1/2">
               <Paragraph ref={experienceRef}>
-                As a core member of the engineering team during a period of
-                rapid growth, I was instrumental in developing and maintaining
-                critical web applications for partner banks.
+                I joined Moniepoint in 2021 and spent 3+ years contributing to
+                the web infrastructure that powered their growth into a fintech
+                unicorn. As a core member of the engineering team during a
+                period of rapid growth, I was instrumental in developing and
+                maintaining critical web applications for partner banks.
               </Paragraph>
               <br />
               <Paragraph ref={experienceRef}>
-                My key focus included engineering the secure 3D payment
+                {/* My key focus included engineering the secure 3D payment
                 authentication pages and building systems designed to manage
                 over 500k daily transactions efficiently. I successfully
                 introduced Semantic Versioning and strict code standards to
                 enhance team collaboration and ensure long-term system stability
-                and maintainability.
+                and maintainability.  */}
+                My work included building web apps designed to manage over 500k
+                daily transactions effectively, building secure payment widgets,
+                engineering Node.js microservices, and implementing 3D Secure
+                payment flows for their SaaS product. I also worked on
+                comprehensive testing suites with Cypress.
               </Paragraph>
-              <br />
+              {/* <br />
               <Paragraph ref={experienceRef}>
                 Moniepoint wasn't a unicorn when I started but it was one before
                 I left. Coincidence? I think not.
-              </Paragraph>
+              </Paragraph> */}
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between pb-12 md:pb-24">
@@ -53,13 +60,24 @@ export default function Experience() {
             </div>
             <div className="text-left py-2 w-full md:w-1/2">
               <Paragraph ref={experienceRef}>
-                Tasked with building a core logistics platform, I drove the
-                end-to-end development of all user-facing features. This
-                required close coordination with the backend team and strategic
-                stakeholders to accurately translate complex business
+                At Scelloo, I contributed to building a logistics operations
+                management platform that was designed to streamline complex
+                supply chain workflows.
+                {/* Tasked with building a core logistics platform, I
+                drove the end-to-end development of all user-facing features.
+                This required close coordination with the backend team and
+                strategic stakeholders to accurately translate complex business
                 requirements into clear, executable technical specifications. My
                 efforts significantly streamlined feature implementation and
-                rapid deployment.
+                rapid deployment. */}
+              </Paragraph>
+              <br />
+              <Paragraph ref={experienceRef}>
+                Working alongside design, product, and backend teams, I
+                translated business requirements into technical specifications
+                and built features using Vue.js. I partnered with stakeholders
+                to define product vision and coordinated closely with QA to
+                ensure reliable, high-quality releases.
               </Paragraph>
             </div>
           </div>
@@ -72,12 +90,19 @@ export default function Experience() {
             </div>
             <div className="text-left py-2 w-full md:w-1/2">
               <Paragraph ref={experienceRef}>
-                Spearheaded the front-end architecture and user interface design
-                for SmartWorks, a dynamic API tool developed to automate client
-                acquisition and lead generation on the Upwork platform. My
-                responsibilities included implementing new features, refining
-                the user experience, and coordinating product demos to gather
-                feedback and drive improvements.
+                I designed and built products for clients and internal tools
+                like SmartWorks, a client acquisition tool that leveraged
+                Upwork's API to generate qualified leads for the business
+                development team. The platform featured an intuitive interface
+                that made lead management efficient and actionable.
+              </Paragraph>
+              <br />
+              <Paragraph ref={experienceRef}>
+                My responsibilities included conducting regular client demos and
+                feedback sessions, using insights to drive rapid iterations and
+                ensure the product evolved with user needs. This client-centered
+                approach resulted in features that directly supported business
+                growth.
               </Paragraph>
             </div>
           </div>

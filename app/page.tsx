@@ -41,7 +41,7 @@ export default function Home() {
 
   useEffect(() => {
     if (!isLoading && fontsLoaded) {
-      const tl = gsap.timeline({ delay: 0.7 });
+      const tl = gsap.timeline();
 
       tl.to(".loading-screen", {
         yPercent: -100,

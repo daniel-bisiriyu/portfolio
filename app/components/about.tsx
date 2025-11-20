@@ -27,7 +27,7 @@ export default function About() {
 
   return (
     <div id="about" className="mt-24 xl:mt-48">
-      <Heading ref={aboutRef} text="About" />
+      <Heading ref={aboutRef} isAbout={true} text="About" />
       <div className="about pb-12 px-4 md:px-24 xl:px-54">
         <div className="moi py-12 md:py-32 flex flex-col-reverse md:flex-row justify-between">
           <div className="w-full md:w-1/2 text-left">
@@ -38,24 +38,29 @@ export default function About() {
               over 6 years experience crafting web solutions in high-growth
               teams, creating products used by millions and helping companies
               transform complex ideas into clean, functional digital
-              experiences.
+              experiences. I spent four years studying Biochemistry and then
+              swapped test tubes for test suites when I picked up a Java
+              textbook in my final year and haven't looked back since.
             </Paragraph>
             <br />
             <Paragraph ref={aboutRef}>
-              My expertise lies in architecting and optimizing web applications
-              using frameworks like React, Vue.js, and TypeScript. My work
-              combines technical depth, strong UI instincts, and a commitment to
-              shipping quality. I have worked in different sectors on over 20
-              major projects across over 10 companies. I am currently working on
-              personal projects, building a company with a friend and having a
-              lot of fun while learning new skills and technologies.
+              My background spans fintech, logistics, edtech, and identity
+              verification, industries where performance, security, and user
+              experience aren't negotiable. I specialize in React, Vue.js, and
+              modern JavaScript, transforming complex requirements into
+              intuitive interfaces that just work. My work combines technical
+              depth, strong UI instincts, and a commitment to shipping quality.
+              I have worked in different sectors on over 20 projects across over
+              10 companies. I am currently working on personal projects,
+              building a company with a friend and having a lot of fun while
+              learning new skills and technologies.
             </Paragraph>
             <br />
-            <Paragraph ref={aboutRef}>
+            {/* <Paragraph ref={aboutRef}>
               I spent four years studying Biochemistry and then swapped test
               tubes for test suites when I picked up a Java textbook in my final
               year and haven't looked back since.
-            </Paragraph>
+            </Paragraph> */}
           </div>
           <div className="hidden md:flex justify-center md:w-1/2">
             <Image

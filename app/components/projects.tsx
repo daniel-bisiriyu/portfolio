@@ -22,12 +22,28 @@ export default function Projects() {
             </div>
             <div className="text-left py-2 w-full md:w-1/2">
               <Paragraph ref={projectsRef}>
-                Delivered a critical administrator dashboard feature designed to
+                I developed a comprehensive administrative dashboard for YouID's
+                identity verification platform using Nuxt.js. The solution
+                focused on providing a secure, high-efficiency tool for managing
+                user identity documents and speeding up administrative
+                workflows. By focusing on intuitive design and efficient data
+                presentation, I created a tool that enhanced operational
+                efficiency across the organization.
+                {/* Delivered a critical administrator dashboard feature designed to
                 streamline and accelerate the identity verification process. The
                 solution focused on providing a secure, high-efficiency tool for
                 managing user identity documents and speeding up administrative
-                workflows.
+                workflows. */}
               </Paragraph>
+              <br />
+              <a
+                href="https://youverify.co/product/youid"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                YOUID
+              </a>
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between pb-12 md:pb-24">
@@ -39,30 +55,30 @@ export default function Projects() {
             </div>
             <div className="text-left py-2 w-full md:w-1/2">
               <Paragraph ref={projectsRef}>
+                {/* I built a report card module for Gradely's educational platform
+                using Vue.js, creating an engaging way for students and parents
+                to track academic progress. The module was designed with user
+                engagement in mind, contributing to the platform's growth
+                initiatives by making educational data accessible and
+                actionable. Clean design and intuitive navigation made it easy
+                for users to understand performance metrics at a glance. */}
                 Developed and implemented the comprehensive report card module
                 for the educational platform. This project involved complex data
                 visualization and ensuring accurate presentation of student
                 performance metrics to meet stakeholder and academic
                 requirements.
               </Paragraph>
+              <br />
+              <a
+                href="https://www.gradely.co/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                Gradely
+              </a>
             </div>
           </div>
-          {/* <div className="flex flex-col md:flex-row justify-between pb-12 md:pb-24">
-            <div className="w-full md:w-1/2">
-              <h1 className="text-3xl md:text-5xl">
-                <SlideText text="Jiggle" />
-              </h1>
-              <p>[2020]</p>
-            </div>
-            <div className="text-left py-2 w-full md:w-1/2">
-              <Paragraph ref={projectsRef}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Eligendi fugiat veritatis enim eveniet! Culpa tempora commodi
-                optio, voluptatem porro rem voluptate quisquam tempore facere
-                eligendi quod, laborum quia repellendus natus?
-              </Paragraph>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

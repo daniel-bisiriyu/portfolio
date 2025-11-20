@@ -102,8 +102,9 @@ export default function Hero({ startAnimation }: HeroProps) {
   }, [startAnimation]);
 
   return (
-    <div className="hero pt-12">
-      <div className="px-4 md:px-24 xl:px-32 text-center md:text-left">
+    // <div className="hero pt-62 md:pt-12 h-screen md:h-auto">
+    <div className="hero pt-0 sm:pt-12">
+      <div className="px-4 py-24 md:py-0 md:px-24 xl:px-32 text-center md:text-left">
         <h1 className="text-2xl font-semibold">
           Hello ~ I&apos;m Daniel Bisiriyu, a
         </h1>

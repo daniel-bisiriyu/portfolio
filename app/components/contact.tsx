@@ -50,7 +50,7 @@ export default function Contact({ onSuccess }: { onSuccess: () => void }) {
 
   return (
     <div id="contact" className="text-center pb-24">
-      <h1 className="text-5xl font-extrabold">
+      <h1 className="text-4xl md:text-5xl font-extrabold">
         <SlideText text="Want to get in Touch?" />
       </h1>
 
