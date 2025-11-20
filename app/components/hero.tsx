@@ -88,21 +88,20 @@ export default function Hero({ startAnimation }: HeroProps) {
       .to(
         "#scramble",
         {
-          scrambleText: "FRONTEND",
+          scrambleText: "SOFTWARE",
         },
         "+=3"
       )
       .to(
         "#scramble",
         {
-          scrambleText: "SOFTWARE",
+          scrambleText: "FRONTEND",
         },
         "+=3"
       );
   }, [startAnimation]);
 
   return (
-    // <div className="hero pt-62 md:pt-12 h-screen md:h-auto">
     <div className="hero pt-0 sm:pt-12">
       <div className="px-4 py-24 md:py-0 md:px-24 xl:px-32 text-center md:text-left">
         <h1 className="text-2xl font-semibold">
@@ -114,7 +113,7 @@ export default function Hero({ startAnimation }: HeroProps) {
               id="scramble"
               className="text-1 text-6xl md:text-9xl xl:text-[12rem] font-extrabold tracking-[10px] invisible"
             >
-              SOFTWARE
+              FRONTEND
             </p>
             <span className="block w-[60%] mx-auto mt-[-1rem] md:ml-8 xl:w-[30rem] xl:ml-24 xl:mt-[-3rem]">
               <svg viewBox="0 0 200 20" preserveAspectRatio="none">
@@ -122,7 +121,6 @@ export default function Hero({ startAnimation }: HeroProps) {
                   d="M5 15 Q 100 5, 195 15"
                   fill="none"
                   stroke="#8b5cf6"
-                  // stroke="rgb(57, 255, 20)"
                   strokeWidth="8"
                   strokeLinecap="round"
                   className="underline-path invisible"
