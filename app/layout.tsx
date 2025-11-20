@@ -6,7 +6,8 @@ import Lenis from "./components/lenis";
 const bebasNeue = Bebas_Neue({ weight: ["400"] });
 
 export const metadata: Metadata = {
-  title: "Daniel Bisiriyu",
+  title:
+    "Daniel Bisiriyu - Frontend Engineer, Genius, Billionaire, Philanthropist",
   description: "Genius, Billionaire, philanthropist and all round great guy!",
 };
 
