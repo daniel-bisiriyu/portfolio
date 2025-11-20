@@ -26,7 +26,7 @@ export default function SlideText({ text }: { text: string }) {
 
   const handleMouseEnter = () => {
     const tl = gsap.timeline({
-      defaults: { duration: 0.5, ease: "power3.out" },
+      defaults: { duration: 0.6, ease: "power3.out" },
     });
 
     if (split.current && splitLower.current)

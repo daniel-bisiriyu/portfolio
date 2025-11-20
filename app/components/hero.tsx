@@ -3,9 +3,13 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrambleTextPlugin, DrawSVGPlugin, SplitText } from "gsap/all";
-
-export default function Hero() {
+interface HeroProps {
+  startAnimation: boolean;
+}
+export default function Hero({ startAnimation }: HeroProps) {
   useGSAP(() => {
+    if (!startAnimation) return;
+
     gsap.registerPlugin(ScrambleTextPlugin, DrawSVGPlugin, SplitText);
     const splitP1 = SplitText.create(".text-1", {
       type: "chars, lines",
@@ -15,6 +19,10 @@ export default function Hero() {
       type: "chars, lines",
       mask: "lines",
     });
+
+    // gsap.set([".text-1", ".text-2"], {
+    //   visibility: 0,
+    // });
 
     gsap.set(".text-1", {
       x: 100,
@@ -28,20 +36,22 @@ export default function Hero() {
       duration: 0.5,
       ease: "power3.out",
     });
-
-    tl.from(splitP1.chars, {
-      yPercent: -100,
-      stagger: {
-        each: 0.1,
-        from: "random",
-      },
-    })
+    tl.set([".text-1", ".text-2", ".underline-path"], { visibility: "visible" }) // reveal without flash
+      .from(splitP1.chars, {
+        yPercent: -100,
+        autoAlpha: 0,
+        stagger: {
+          each: 0.05,
+          from: "random",
+        },
+      })
       .from(
         splitP2.chars,
         {
           yPercent: -100,
+          autoAlpha: 0,
           stagger: {
-            each: 0.1,
+            each: 0.05,
             from: "random",
           },
         },
@@ -65,6 +75,16 @@ export default function Hero() {
         },
         "<"
       )
+      .fromTo(
+        ".underline-path",
+        { drawSVG: "0% 0%" },
+        {
+          drawSVG: "0% 100%",
+          duration: 1,
+          ease: "power4.inOut",
+        },
+        "-=0.5"
+      )
       .to(
         "#scramble",
         {
@@ -79,11 +99,12 @@ export default function Hero() {
         },
         "+=3"
       );
-  });
+  }, [startAnimation]);
 
   return (
-    <div className="hero pt-12">
-      <div className="px-4 md:px-24 xl:px-32 text-center md:text-left magnetic">
+    // <div className="hero pt-62 md:pt-12 h-screen md:h-auto">
+    <div className="hero pt-0 sm:pt-12">
+      <div className="px-4 py-24 md:py-0 md:px-24 xl:px-32 text-center md:text-left">
         <h1 className="text-2xl font-semibold">
           Hello ~ I&apos;m Daniel Bisiriyu, a
         </h1>
@@ -91,7 +112,7 @@ export default function Hero() {
           <div className="text-center md:text-left">
             <p
               id="scramble"
-              className="text-1 text-6xl md:text-9xl xl:text-[12rem] font-extrabold tracking-[10px] magnet ml-"
+              className="text-1 text-6xl md:text-9xl xl:text-[12rem] font-extrabold tracking-[10px] invisible"
             >
               SOFTWARE
             </p>
@@ -104,12 +125,13 @@ export default function Hero() {
                   // stroke="rgb(57, 255, 20)"
                   strokeWidth="8"
                   strokeLinecap="round"
+                  className="underline-path invisible"
                 />
               </svg>
             </span>
           </div>
           <div className="text-center md:text-right mt-6">
-            <p className="text-2 text-6xl md:pt-12 md:text-9xl xl:text-[12rem] font-extrabold tracking-[10px] magnet">
+            <p className="text-2 text-6xl md:pt-12 md:text-9xl xl:text-[12rem] font-extrabold tracking-[10px] invisible">
               ENGINEER
             </p>
           </div>
@@ -117,25 +139,4 @@ export default function Hero() {
       </div>
     </div>
   );
-}
-
-{
-  /* <svg viewBox="0 0 200 20" preserveAspectRatio="none">
-              <path
-                d="M5 12 Q 50 8, 100 11 T 195 10"
-                fill="none"
-                stroke="#8b5cf6"
-                strokeWidth="8"
-                strokeLinecap="round"
-              />
-            </svg> */
-}
-{
-  /* <div> */
-}
-{
-  /* <p className="py-6 text-xl">
-          I am a jack of all trades, a master of one, Frontend and I have over
-          five years building stuff.
-        </p> */
 }

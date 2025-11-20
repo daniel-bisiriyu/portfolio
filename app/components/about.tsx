@@ -27,31 +27,52 @@ export default function About() {
 
   return (
     <div id="about" className="mt-24 xl:mt-48">
-      <Heading ref={aboutRef} text="About" />
-      <div className="about pb-12 px-4 md:px-24 xl:px-64">
+      <Heading ref={aboutRef} isAbout={true} text="About" />
+      <div className="about pb-12 px-4 md:px-24 xl:px-54">
         <div className="moi py-12 md:py-32 flex flex-col-reverse md:flex-row justify-between">
           <div className="w-full md:w-1/2 text-left">
+            <Paragraph ref={aboutRef}>TL:DR - I am awesome!</Paragraph>
+            <br />
             <Paragraph ref={aboutRef}>
-              TL:DR - I am a great engineer and you should hire me!
+              Hi, I&apos;m Daniel! A Software Engineer based in Lagos. I have
+              over 6 years experience crafting web solutions in high-growth
+              teams, creating products used by millions and helping companies
+              transform complex ideas into clean, functional digital
+              experiences. I spent four years studying Biochemistry and then
+              swapped test tubes for test suites when I picked up a Java
+              textbook in my final year and haven&apos;t looked back since.
             </Paragraph>
+            <br />
             <Paragraph ref={aboutRef}>
-              Hi, I&apos;m Daniel! Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Aut sint corporis, itaque quis voluptatem nihil
-              possimus maxime similique deleniti reprehenderit quos velit esse
-              harum facilis neque cupiditate ad sequi temporibus?x
+              My background spans fintech, logistics, edtech, and identity
+              verification, industries where performance, security, and user
+              experience aren&apos;t negotiable. I specialize in React, Vue.js,
+              and modern JavaScript, transforming complex requirements into
+              intuitive interfaces that just work. My work combines technical
+              depth, strong UI instincts, and a commitment to shipping quality.
+              I have worked in different sectors on over 20 projects across over
+              10 companies. I am currently working on personal projects,
+              building a company with a friend and having a lot of fun while
+              learning new skills and technologies.
             </Paragraph>
+            <br />
+            {/* <Paragraph ref={aboutRef}>
+              I spent four years studying Biochemistry and then swapped test
+              tubes for test suites when I picked up a Java textbook in my final
+              year and haven&apos;t looked back since.
+            </Paragraph> */}
           </div>
           <div className="hidden md:flex justify-center md:w-1/2">
             <Image
               src="/moi.jpg"
-              width={300}
-              height={300}
+              width={350}
+              height={200}
               alt="Daniel Bisiriyu"
-              className="moi-img grayscale"
+              className="moi-img grayscale h-auto"
             />
           </div>
         </div>
-        <div className="">
+        {/* <div className="">
           <hr />
         </div>
         <div className="py-6 md:py-12 xl:py-24">
@@ -63,7 +84,7 @@ export default function About() {
             mollitia iure laboriosam laudantium. Nobis facilis adipisci dolorum
             maiores officia rem, repellat blanditiis.
           </Paragraph>
-        </div>
+        </div> */}
       </div>
     </div>
   );

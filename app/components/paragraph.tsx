@@ -3,9 +3,9 @@
 import gsap from "gsap";
 import { ReactRef, useGSAP } from "@gsap/react";
 import { ScrollTrigger, SplitText } from "gsap/all";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
-const montSerrat = Inter({ weight: ["400"] });
+const montSerrat = Montserrat({ weight: ["400"] });
 
 export default function Paragraph({
   ref,
@@ -26,7 +26,7 @@ export default function Paragraph({
         scrollTrigger: {
           trigger: ".p-wrapper p",
           start: "top 80%",
-          end: "bottom 50%",
+          end: "bottom 60%",
           scrub: 0.5,
         },
         yPercent: 100,
@@ -43,7 +43,7 @@ export default function Paragraph({
 
   return (
     <div ref={ref} className="p-wrapper">
-      <p className={`${montSerrat.className} text-sm  xl:text-lg`}>
+      <p className={`${montSerrat.className} text-sm  xl:text-base`}>
         {children}
       </p>
     </div>
