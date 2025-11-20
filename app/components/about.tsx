@@ -68,7 +68,7 @@ export default function About() {
               width={350}
               height={200}
               alt="Daniel Bisiriyu"
-              className="moi-img grayscale"
+              className="moi-img grayscale h-auto"
             />
           </div>
         </div>
