@@ -22,10 +22,10 @@ export default function Projects() {
             </div>
             <div className="text-left py-2 w-full md:w-1/2">
               <Paragraph ref={projectsRef}>
-                I developed a comprehensive administrative dashboard for YouID's
-                identity verification platform using Nuxt.js. The solution
-                focused on providing a secure, high-efficiency tool for managing
-                user identity documents and speeding up administrative
+                I developed a comprehensive administrative dashboard for
+                YouID&apos;s identity verification platform using Nuxt.js. The
+                solution focused on providing a secure, high-efficiency tool for
+                managing user identity documents and speeding up administrative
                 workflows. By focusing on intuitive design and efficient data
                 presentation, I created a tool that enhanced operational
                 efficiency across the organization.
@@ -55,10 +55,10 @@ export default function Projects() {
             </div>
             <div className="text-left py-2 w-full md:w-1/2">
               <Paragraph ref={projectsRef}>
-                {/* I built a report card module for Gradely's educational platform
+                {/* I built a report card module for Gradely&apos;s educational platform
                 using Vue.js, creating an engaging way for students and parents
                 to track academic progress. The module was designed with user
-                engagement in mind, contributing to the platform's growth
+                engagement in mind, contributing to the platform&apos;s growth
                 initiatives by making educational data accessible and
                 actionable. Clean design and intuitive navigation made it easy
                 for users to understand performance metrics at a glance. */}

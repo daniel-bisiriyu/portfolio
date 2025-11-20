@@ -10,6 +10,7 @@ const montSerrat = Montserrat({ weight: ["400"] });
 
 export default function Contact({ onSuccess }: { onSuccess: () => void }) {
   const [state, handleSubmit] = useForm("mwprngpl");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [clientErrors, setClientErrors] = useState<any>({});
   const formRef = useRef<HTMLFormElement | null>(null);
 
@@ -18,7 +19,7 @@ export default function Contact({ onSuccess }: { onSuccess: () => void }) {
       formRef.current?.reset();
       onSuccess();
     }
-  }, [state.succeeded]);
+  }, [state.succeeded, onSuccess]);
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -27,6 +28,7 @@ export default function Contact({ onSuccess }: { onSuccess: () => void }) {
     const email = form.email.value.trim();
     const message = form.message.value.trim();
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const errors: any = {};
 
     if (!email) {

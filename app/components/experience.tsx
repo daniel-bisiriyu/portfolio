@@ -46,7 +46,7 @@ export default function Experience() {
               </Paragraph>
               {/* <br />
               <Paragraph ref={experienceRef}>
-                Moniepoint wasn't a unicorn when I started but it was one before
+                Moniepoint wasn&apos;t a unicorn when I started but it was one before
                 I left. Coincidence? I think not.
               </Paragraph> */}
             </div>
@@ -92,7 +92,7 @@ export default function Experience() {
               <Paragraph ref={experienceRef}>
                 I designed and built products for clients and internal tools
                 like SmartWorks, a client acquisition tool that leveraged
-                Upwork's API to generate qualified leads for the business
+                Upwork&apos;s API to generate qualified leads for the business
                 development team. The platform featured an intuitive interface
                 that made lead management efficient and actionable.
               </Paragraph>

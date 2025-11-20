@@ -5,7 +5,7 @@ export default function Notification({ onClose }: { onClose: () => void }) {
     setTimeout(() => {
       onClose();
     }, 10000);
-  }, []);
+  }, [onClose]);
 
   return (
     <div className="fixed right-[1rem] top-[1rem] w-[20rem] bg-white z-[999] flex items-cente p-4 rounded-md">

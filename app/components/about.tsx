@@ -40,14 +40,14 @@ export default function About() {
               transform complex ideas into clean, functional digital
               experiences. I spent four years studying Biochemistry and then
               swapped test tubes for test suites when I picked up a Java
-              textbook in my final year and haven't looked back since.
+              textbook in my final year and haven&apos;t looked back since.
             </Paragraph>
             <br />
             <Paragraph ref={aboutRef}>
               My background spans fintech, logistics, edtech, and identity
               verification, industries where performance, security, and user
-              experience aren't negotiable. I specialize in React, Vue.js, and
-              modern JavaScript, transforming complex requirements into
+              experience aren&apos;t negotiable. I specialize in React, Vue.js,
+              and modern JavaScript, transforming complex requirements into
               intuitive interfaces that just work. My work combines technical
               depth, strong UI instincts, and a commitment to shipping quality.
               I have worked in different sectors on over 20 projects across over
@@ -59,7 +59,7 @@ export default function About() {
             {/* <Paragraph ref={aboutRef}>
               I spent four years studying Biochemistry and then swapped test
               tubes for test suites when I picked up a Java textbook in my final
-              year and haven't looked back since.
+              year and haven&apos;t looked back since.
             </Paragraph> */}
           </div>
           <div className="hidden md:flex justify-center md:w-1/2">

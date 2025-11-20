@@ -9,7 +9,7 @@ import Hero from "./components/hero";
 import LoaderText from "./components/loading-text";
 import Navbar from "./components/navbar";
 import Skills from "./components/skills";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import gsap from "gsap";
 import Projects from "./components/projects";
@@ -57,13 +57,13 @@ export default function Home() {
     }
   }, [isLoading, fontsLoaded]);
 
-  const handleContactSuccess = () => {
+  const handleContactSuccess = useCallback(() => {
     setShowNotification(true);
-  };
+  }, []);
 
-  const handleContactClose = () => {
+  const handleContactClose = useCallback(() => {
     setShowNotification(false);
-  };
+  }, []);
 
   return (
     <>
