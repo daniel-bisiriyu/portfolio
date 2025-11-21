@@ -27,7 +27,7 @@ export default function About() {
 
   return (
     <div id="about" className="mt-24 xl:mt-48">
-      <Heading ref={aboutRef} isAbout={true} text="About" />
+      <Heading ref={aboutRef} isAbout={true} text="About me" />
       <div className="about pb-12 px-4 md:px-24 xl:px-54">
         <div className="moi py-12 md:py-32 flex flex-col-reverse md:flex-row justify-between">
           <div className="w-full md:w-1/2 text-left">
