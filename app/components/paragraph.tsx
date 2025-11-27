@@ -17,25 +17,27 @@ export default function Paragraph({
   useGSAP(
     () => {
       gsap.registerPlugin(ScrollTrigger, SplitText);
-      const splitP = SplitText.create(".p-wrapper p", {
+      SplitText.create(".p-wrapper p", {
         type: "lines",
         mask: "lines",
-      });
-
-      gsap.from(splitP.lines, {
-        scrollTrigger: {
-          trigger: ".p-wrapper p",
-          start: "top 80%",
-          end: "bottom 60%",
-          scrub: 0.5,
-          once: true,
-        },
-        yPercent: 100,
-        opacity: 0,
-        duration: 0.2,
-        stagger: {
-          each: 0.05,
-          from: "end",
+        autoSplit: true,
+        onSplit(self) {
+          return gsap.from(self.lines, {
+            scrollTrigger: {
+              trigger: ".p-wrapper p",
+              start: "top 80%",
+              end: "bottom 60%",
+              scrub: 0.5,
+              once: true,
+            },
+            yPercent: 100,
+            opacity: 0,
+            duration: 0.2,
+            stagger: {
+              each: 0.05,
+              from: "end",
+            },
+          });
         },
       });
     },

@@ -60,7 +60,7 @@ export default function Contact({ onSuccess }: { onSuccess: () => void }) {
         <form
           ref={formRef}
           onSubmit={onSubmit}
-          className={`${montSerrat.className} w-full px-6 xl:px-0 md:w-[50%] xl:w-[30%]`}
+          className={`${montSerrat.className} w-full px-6 xl:px-0 sm:w-[80%] md:w-[50%] xl:w-[30%]`}
         >
           <div className="py-12">
             <input
