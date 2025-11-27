@@ -14,15 +14,15 @@ export default function Experience() {
       <div className="experience text-left pt-8">
         <Heading ref={experienceRef} text="Experience" />
         <ExperienceGallery />
-        <div className="px-6 md:px-24 xl:px-64 mt-12 md:mt-12 xl:mt-64">
-          <div className="flex flex-col md:flex-row justify-between pb-12 md:pb-24">
-            <div className="w-full md:w-1/2">
+        <div className="px-6 sm:px-12 md:px-24 xl:px-64 mt-12 md:mt-12 xl:mt-64">
+          <div className="flex flex-col sm:flex-row justify-between pb-12 md:pb-24">
+            <div className="w-full sm:w-1/2">
               <div className="text-3xl md:text-5xl font-semibold">
                 <SlideText text="Moniepoint" />
               </div>
               <p>[2021 - 2025]</p>
             </div>
-            <div className="text-left py-2 w-full md:w-1/2">
+            <div className="text-left py-2 w-full sm:w-1/2">
               <Paragraph ref={experienceRef}>
                 I joined Moniepoint in 2021 and spent 3+ years contributing to
                 the web infrastructure that powered their growth into a fintech
@@ -51,14 +51,14 @@ export default function Experience() {
               </Paragraph> */}
             </div>
           </div>
-          <div className="flex flex-col md:flex-row justify-between pb-12 md:pb-24">
-            <div className="w-full md:w-1/2">
+          <div className="flex flex-col sm:flex-row justify-between pb-12 md:pb-24">
+            <div className="w-full sm:w-1/2">
               <h1 className="text-3xl md:text-5xl">
                 <SlideText text="Scelloo" />
               </h1>
               <p>[2020 - 2021]</p>
             </div>
-            <div className="text-left py-2 w-full md:w-1/2">
+            <div className="text-left py-2 w-full sm:w-1/2">
               <Paragraph ref={experienceRef}>
                 At Scelloo, I contributed to building a logistics operations
                 management platform that was designed to streamline complex
@@ -81,14 +81,14 @@ export default function Experience() {
               </Paragraph>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row justify-between pb-12 md:pb-24">
-            <div className="w-full md:w-1/2">
+          <div className="flex flex-col sm:flex-row justify-between pb-12 md:pb-24">
+            <div className="w-full sm:w-1/2">
               <h1 className="text-3xl md:text-5xl">
                 <SlideText text="VisionDev" />
               </h1>
               <p>[2019 - 2020]</p>
             </div>
-            <div className="text-left py-2 w-full md:w-1/2">
+            <div className="text-left py-2 w-full sm:w-1/2">
               <Paragraph ref={experienceRef}>
                 I designed and built products for clients and internal tools
                 like SmartWorks, a client acquisition tool that leveraged

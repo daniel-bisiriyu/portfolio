@@ -20,22 +20,6 @@ export default function Heading({
         type: "chars, lines",
         mask: "lines",
       });
-      // const tl = gsap.timeline();
-
-      // const splitMobile = SplitText.create(".no-animation-on-scroll", {
-      //   type: "chars, lines",
-      //   mask: "lines",
-      // });
-
-      // gsap.from(splitMobile.chars, {
-      //   yPercent: 100,
-      //   opacity: 0,
-      //   duration: 1,
-      //   stagger: {
-      //     each: 0.05,
-      //     from: "center",
-      //   },
-      // });
 
       const isMobile = window.innerWidth <= 768;
 
@@ -47,6 +31,7 @@ export default function Heading({
           start: "top 80%",
           end: "bottom 50%",
           scrub: 0.5,
+          once: true,
         },
         yPercent: 100,
         opacity: 0,
@@ -69,6 +54,7 @@ export default function Heading({
             start: "top 80%",
             end: "bottom 30%",
             scrub: 0.5,
+            once: true,
           },
           duration: 1,
           ease: "power4.inOut",
@@ -78,10 +64,6 @@ export default function Heading({
     { scope: ref }
   );
 
-  // const shouldNotAnimateOnScroll = () => {
-  //   return isAbout && window.innerWidth < 788;
-  // };
-
   return (
     <div ref={ref}>
       <h1
@@ -89,14 +71,6 @@ export default function Heading({
       >
         {text}
       </h1>
-
-      {/* <h1
-        className={`${
-          shouldNotAnimateOnScroll() && "no-animation-on-scroll"
-        } block md:hidden leading-[99%] text-5xl text-center relative font-extrabold`}
-      >
-        {text}
-      </h1> */}
       <div className="w-[30%] mx-auto mt-0 md:mt-[-1.5rem]">
         <svg viewBox="0 0 200 20" preserveAspectRatio="none">
           <path

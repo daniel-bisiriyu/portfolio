@@ -12,15 +12,15 @@ export default function Projects() {
     <div ref={projectsRef}>
       <div className="experience text-left pt-8">
         <Heading ref={projectsRef} text="Projects" />
-        <div className="px-6 md:px-24 xl:px-64 mt-12 md:mt-12">
-          <div className="flex flex-col md:flex-row justify-between pb-12 md:pb-24">
-            <div className="w-full md:w-1/2">
+        <div className="px-6 sm:px-12 md:px-24 xl:px-64 mt-12 md:mt-12">
+          <div className="flex flex-col sm:flex-row justify-between pb-12 md:pb-24">
+            <div className="w-full sm:w-1/2">
               <div className="text-3xl md:text-5xl font-semibold">
                 <SlideText text="YouID" />
               </div>
               <p>[2021]</p>
             </div>
-            <div className="text-left py-2 w-full md:w-1/2">
+            <div className="text-left py-2 w-full sm:w-1/2">
               <Paragraph ref={projectsRef}>
                 I developed a comprehensive administrative dashboard for
                 YouID&apos;s identity verification platform using Nuxt.js. The
@@ -46,14 +46,14 @@ export default function Projects() {
               </a>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row justify-between pb-12 md:pb-24">
-            <div className="w-full md:w-1/2">
+          <div className="flex flex-col sm:flex-row justify-between pb-12 md:pb-24">
+            <div className="w-full sm:w-1/2">
               <h1 className="text-3xl md:text-5xl">
                 <SlideText text="Gradely" />
               </h1>
               <p>[2021]</p>
             </div>
-            <div className="text-left py-2 w-full md:w-1/2">
+            <div className="text-left py-2 w-full sm:w-1/2">
               <Paragraph ref={projectsRef}>
                 {/* I built a report card module for Gradely&apos;s educational platform
                 using Vue.js, creating an engaging way for students and parents

@@ -28,6 +28,7 @@ export default function Paragraph({
           start: "top 80%",
           end: "bottom 60%",
           scrub: 0.5,
+          once: true,
         },
         yPercent: 100,
         opacity: 0,
