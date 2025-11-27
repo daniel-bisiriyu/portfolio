@@ -37,7 +37,7 @@ export default function LoaderText() {
           Daniel
         </text>
       </svg>
-      <div className="ml-[-1em]">
+      <div className="mx-[1em]">
         <PreLoader />
       </div>
       <svg viewBox="0 0 300 100" className="w-[15rem] font-medium">
